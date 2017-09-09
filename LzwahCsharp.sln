@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LzwahCsharp", "LzwahCsharp\LzwahCsharp.csproj", "{CA984AA4-A751-4CC9-AE6E-EC4D9B02081A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LzwahCsharpTests", "LzwahCsharpTests\LzwahCsharpTests.csproj", "{314F67B3-4A3E-4067-9ABD-72BB0BBE5C20}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA984AA4-A751-4CC9-AE6E-EC4D9B02081A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA984AA4-A751-4CC9-AE6E-EC4D9B02081A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA984AA4-A751-4CC9-AE6E-EC4D9B02081A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA984AA4-A751-4CC9-AE6E-EC4D9B02081A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{314F67B3-4A3E-4067-9ABD-72BB0BBE5C20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{314F67B3-4A3E-4067-9ABD-72BB0BBE5C20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{314F67B3-4A3E-4067-9ABD-72BB0BBE5C20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{314F67B3-4A3E-4067-9ABD-72BB0BBE5C20}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {02A0A1B7-E58F-4347-9107-F3D76139BF37}
+	EndGlobalSection
+EndGlobal
