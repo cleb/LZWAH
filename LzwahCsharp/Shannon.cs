@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LzwahCsharp
 {
-    public class Shannon
+    public class Shannon : IEncoder
     {
         private IBitIo inputOutput;
         List<ShannonItem> values;
