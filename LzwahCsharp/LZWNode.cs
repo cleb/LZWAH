@@ -11,6 +11,7 @@ namespace LzwahCsharp
         public byte value;
         public long identifier;
         Dictionary<byte, LZWNode> children;
+        public LZWNode parent = null;
         public LZWNode(byte value, long identifier)
         {
             this.value = value;
@@ -19,6 +20,7 @@ namespace LzwahCsharp
         }
         public void AddChild(LZWNode child)
         {
+            child.parent = this;
             this.children[child.value] = child;
         }
         public bool ContainsValue(byte value)

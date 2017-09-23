@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LzwahCsharp
 {
-    interface IEncoder
+    public interface IEncoder
     {
         void Encode(Int64 value);
         long Decode();
