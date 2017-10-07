@@ -24,6 +24,10 @@ namespace LzwahCsharp.Tests
         {
             return values[index++];
         }
+        public void AddValue(Int64 value)
+        {
+
+        }
     }
     [TestClass()]
     public class LZWTests

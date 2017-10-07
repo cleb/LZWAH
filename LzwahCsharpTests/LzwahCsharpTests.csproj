@@ -56,9 +56,12 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="LZWASTests.cs" />
     <Compile Include="LZWTests.cs" />
+    <Compile Include="MockBitWriter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ShannonTests.cs" />
+    <Compile Include="UnitTest1.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

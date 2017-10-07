@@ -10,5 +10,6 @@ namespace LzwahCsharp
     {
         void Encode(Int64 value);
         long Decode();
+        void AddValue(Int64 value);
     }
 }

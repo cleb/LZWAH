@@ -51,8 +51,10 @@ namespace LzwahCsharp
                 LZWNode child = new LZWNode(value, nextNodeValue);
                 currentNode.AddChild(child);
                 allNodes[nextNodeValue] = child;
-                nextNodeValue++;
                 encoder.Encode(currentNode.identifier);
+                encoder.AddValue(nextNodeValue);
+                nextNodeValue++;
+                
                 currentNode = root.GetChild(value);
             }
         }    
@@ -95,6 +97,7 @@ namespace LzwahCsharp
             {
                 currentNode = currentNode.GetChild(firstValue);
             }
+            encoder.AddValue(nextNodeValue);
         }
     }
 }

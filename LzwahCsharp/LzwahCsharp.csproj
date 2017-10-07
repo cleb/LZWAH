@@ -45,6 +45,7 @@
     <Compile Include="IBitIo.cs" />
     <Compile Include="IEncoder.cs" />
     <Compile Include="LZW.cs" />
+    <Compile Include="LZWAS.cs" />
     <Compile Include="LZWNode.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

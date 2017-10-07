@@ -126,5 +126,9 @@ namespace LzwahCsharp
 
 
         }
+        public void AddValue(Int64 value)
+        {
+            values.Add(new ShannonItem(value, 1));
+        }
     }
 }
