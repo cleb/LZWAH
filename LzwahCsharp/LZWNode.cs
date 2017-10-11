@@ -12,6 +12,7 @@ namespace LzwahCsharp
         public long identifier;
         Dictionary<byte, LZWNode> children;
         public LZWNode parent = null;
+        public long usages = 1;
         public LZWNode(byte value, long identifier)
         {
             this.value = value;
@@ -30,6 +31,14 @@ namespace LzwahCsharp
         public LZWNode GetChild(byte value)
         {
             return this.children[value];
+        }
+        public void AddUsage()
+        {
+            usages++;
+        }
+        public long GetUsages()
+        {
+            return usages;
         }
     }
 }

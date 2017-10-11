@@ -35,5 +35,24 @@ namespace LzwahCsharp.Tests
                 Assert.AreEqual(character, actual);
             }
         }
+
+        [TestMethod()]
+        public void SameCharacterTest()
+        {
+            MockBitWriter writer = new MockBitWriter();
+            LZWAS encoder = new LZWAS(writer);
+            LZWAS decoder = new LZWAS(writer);
+            for(int i=0;i<10;i++)
+            {
+                encoder.Encode(42);
+            }
+            encoder.EncoderFinalize();
+            
+            for (int i = 0; i < 10; i++)
+            {
+                byte actual = decoder.Decode();
+                Assert.AreEqual(42, actual);
+            }
+        }
     }
 }

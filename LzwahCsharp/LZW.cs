@@ -42,7 +42,7 @@ namespace LzwahCsharp
 
         public void Encode(byte value)
         {
-            if (currentNode.ContainsValue(value))
+            if (currentNode.ContainsValue(value) )
             {
                 currentNode = currentNode.GetChild(value);
             }
@@ -52,12 +52,28 @@ namespace LzwahCsharp
                 currentNode.AddChild(child);
                 allNodes[nextNodeValue] = child;
                 encoder.Encode(currentNode.identifier);
+                currentNode.AddUsage();
                 encoder.AddValue(nextNodeValue);
-                nextNodeValue++;
-                
+                IncreaseNextNodeValue();
+
                 currentNode = root.GetChild(value);
             }
-        }    
+        }
+
+        private long IncreaseNextNodeValue()
+        {
+            nextNodeValue++;
+            /*if(nextNodeValue > 4095)
+            {
+                nextNodeValue = 256;
+            }
+            while(allNodes.ContainsKey(nextNodeValue) && allNodes[nextNodeValue].GetUsages() > 1)
+            {
+                nextNodeValue++;
+            }*/
+            return nextNodeValue;
+        }
+
         public void EncoderFinalize()
         {
             encoder.Encode(currentNode.identifier);
@@ -75,6 +91,20 @@ namespace LzwahCsharp
         {
             Stack<byte> traceBuffer = new Stack<byte>();
             valueToDecode = encoder.Decode();
+            if (!allNodes.ContainsKey(valueToDecode))
+            {
+                LZWNode backTraceNode = currentNode;
+                while (backTraceNode.parent != root)
+                {
+                    backTraceNode = backTraceNode.parent;
+
+                }
+                LZWNode child = new LZWNode(backTraceNode.value, valueToDecode);
+                currentNode.AddChild(child);
+                currentNode.AddUsage();
+                currentNode = child;
+                allNodes[valueToDecode] = child;
+            }
             LZWNode traceNode = allNodes[valueToDecode];
             byte lastValue = traceNode.value;
             byte firstValue = 0;
@@ -92,7 +122,7 @@ namespace LzwahCsharp
                 currentNode.AddChild(child);
                 allNodes[nextNodeValue] = child;
                 currentNode = allNodes[valueToDecode];
-                nextNodeValue++;
+                IncreaseNextNodeValue();
             } else
             {
                 currentNode = currentNode.GetChild(firstValue);
