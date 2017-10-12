@@ -24,9 +24,14 @@ namespace LzwahCsharp.Tests
         {
             return values[index++];
         }
-        public void AddValue(Int64 value)
+        public void AddValue(Int64 value, long probability = 1)
         {
 
+        }
+
+        public long GetProbability(long value)
+        {
+            return 1;
         }
     }
     [TestClass()]

@@ -11,6 +11,8 @@ namespace LzwahCsharp
     {
         private BinaryWriter writer;
         private FileStream file;
+        private byte buffer = 0;
+        private int bufferLength = 0;
         public Writer(string fileName)
         {
             file = File.Open(fileName, FileMode.Create);
@@ -28,10 +30,25 @@ namespace LzwahCsharp
 
         public void WriteBit(bool bit)
         {
-            writer.Write(bit);
+            buffer <<= 1;
+            if(bit)
+            {
+                buffer |= 1;
+            }
+            bufferLength++;
+            if(bufferLength == 8)
+            {
+                writer.Write(buffer);
+                bufferLength = 0;
+            }
+            
         }
         public void CloseStream()
         {
+            while (bufferLength > 0)
+            {
+                WriteBit(false);
+            }
             file.Close();
         }
     }

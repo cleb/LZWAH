@@ -11,6 +11,8 @@ namespace LzwahCsharp
     {
         private BinaryReader reader;
         private FileStream file;
+        private byte buffer = 0;
+        private int bufferLength = 0;
         public Reader(string fileName)
         {
             file = File.Open(fileName, FileMode.Open);
@@ -23,7 +25,16 @@ namespace LzwahCsharp
 
         public bool ReadBit()
         {
-            return reader.ReadBoolean();            
+            if(bufferLength == 0)
+            {
+                buffer = reader.ReadByte();
+                bufferLength = 8;
+            }
+            bool ret = (buffer & 128) == 128;
+            buffer <<= 1;
+            bufferLength--;
+            return ret;
+
         }
 
         public void WriteBit(bool bit)

@@ -30,6 +30,8 @@ namespace LzwahCsharp
             {
                 outfile.WriteByte(decoder.Decode());
             }
+            Console.Write("done");
+            
         }
     }
 }

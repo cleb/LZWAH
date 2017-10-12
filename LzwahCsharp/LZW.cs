@@ -19,6 +19,9 @@ namespace LzwahCsharp
 
         long valueToDecode = -1;
 
+        long maxBufferLength = 0;
+        LZWNode maxBufferNode;
+
         Stack<byte> buffer;
 
         LZWNode currentNode;
@@ -128,6 +131,11 @@ namespace LzwahCsharp
                 currentNode = currentNode.GetChild(firstValue);
             }
             encoder.AddValue(nextNodeValue);
+            if(buffer.Count() > maxBufferLength)
+            {
+                maxBufferLength = buffer.Count();
+                maxBufferNode = allNodes[valueToDecode];
+            }
         }
     }
 }

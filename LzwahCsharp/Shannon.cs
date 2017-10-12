@@ -126,9 +126,13 @@ namespace LzwahCsharp
 
 
         }
-        public void AddValue(Int64 value)
+        public void AddValue(Int64 value, long probability = 1)
         {
-            values.Add(new ShannonItem(value, 1));
+            values.Add(new ShannonItem(value, probability));
+        }
+        public long GetProbability(Int64 value)
+        {
+            return values[FindValue(value)].probability;
         }
     }
 }
