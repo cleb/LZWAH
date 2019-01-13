@@ -13,7 +13,8 @@ C:\Users\jjuda\source\repos\LzwahCsharp\LzwahCsharpTests\bin\Debug\LzwahCsharp.p
 C:\Users\jjuda\source\repos\LzwahCsharp\LzwahCsharpTests\bin\Debug\LzwahCsharp.exe.config
 C:\Users\jjuda\source\repos\LzwahCsharp\LzwahCsharpTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
 C:\Users\jjuda\source\repos\LzwahCsharp\LzwahCsharpTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
-C:\Users\jjuda\source\repos\LzwahCsharp\LzwahCsharpTests\obj\Debug\LzwahCsharpTests.csprojResolveAssemblyReference.cache
 C:\Users\jjuda\source\repos\LzwahCsharp\LzwahCsharpTests\obj\Debug\LzwahCsharpTests.csproj.CoreCompileInputs.cache
 C:\Users\jjuda\source\repos\LzwahCsharp\LzwahCsharpTests\obj\Debug\LzwahCsharpTests.dll
 C:\Users\jjuda\source\repos\LzwahCsharp\LzwahCsharpTests\obj\Debug\LzwahCsharpTests.pdb
+C:\Users\jjuda\source\repos\LzwahCsharp\LzwahCsharpTests\obj\Debug\LzwahCsharpTests.csprojAssemblyReference.cache
+C:\Users\jjuda\source\repos\LzwahCsharp\LzwahCsharpTests\obj\Debug\LzwahCsharpTests.csproj.CopyComplete

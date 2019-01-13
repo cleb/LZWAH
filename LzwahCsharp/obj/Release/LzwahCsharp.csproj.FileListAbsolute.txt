@@ -4,3 +4,4 @@ C:\Users\jjuda\source\repos\LzwahCsharp\LzwahCsharp\bin\Release\LzwahCsharp.pdb
 C:\Users\jjuda\source\repos\LzwahCsharp\LzwahCsharp\obj\Release\LzwahCsharp.csproj.CoreCompileInputs.cache
 C:\Users\jjuda\source\repos\LzwahCsharp\LzwahCsharp\obj\Release\LzwahCsharp.exe
 C:\Users\jjuda\source\repos\LzwahCsharp\LzwahCsharp\obj\Release\LzwahCsharp.pdb
+C:\Users\jjuda\source\repos\LzwahCsharp\LzwahCsharp\obj\Release\LzwahCsharp.csprojAssemblyReference.cache

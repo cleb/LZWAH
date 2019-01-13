@@ -42,6 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommandLineInterface.cs" />
+    <Compile Include="LzwahCli.cs" />
     <Compile Include="Reader.cs" />
     <Compile Include="Writer.cs" />
     <Compile Include="IBitIo.cs" />

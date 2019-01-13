@@ -13,11 +13,7 @@ namespace LzwahCsharp
         public Shannon(IBitIo io)
         {
             inputOutput = io;
-            values = new List<ShannonItem>();
-            for(int i = 0; i < 256; i++)
-            {
-                values.Add(new ShannonItem(i, 1));
-            }
+            values = Enumerable.Range(0, 256).Select(i => new ShannonItem(i, 1)).ToList();
         }
         public int GetHalfIndex(double sumHalf, int first, int last)
         {
